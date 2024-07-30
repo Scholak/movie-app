@@ -1,0 +1,87 @@
+.typography {
+	font-family: 'Poppins', sans-serif;
+
+	&.capitalize {
+		text-transform: capitalize;
+	}
+
+	// Color Styles
+	&.white {
+		color: #fefefe;
+	}
+
+	&.dark {
+		color: #021526;
+	}
+
+	// Alignment Styles
+	&.left {
+		text-align: left;
+	}
+
+	&.center {
+		text-align: center;
+	}
+
+	&.right {
+		text-align: right;
+	}
+
+	&.justify {
+		text-align: justify;
+	}
+
+	// Font Size Styles
+	&.xs {
+		font-size: 12px;
+	}
+
+	&.sm {
+		font-size: 14px;
+	}
+
+	&.md {
+		font-size: 16px;
+	}
+
+	&.lg {
+		font-size: 18px;
+	}
+
+	&.xl {
+		font-size: 20px;
+	}
+
+	&.xxl {
+		font-size: 24px;
+	}
+
+	&.xxxl {
+		font-size: 28px;
+	}
+
+	&.xxxxl {
+		font-size: 32px;
+	}
+
+	// Font Weight Styles
+	&.thin {
+		font-weight: 300;
+	}
+
+	&.regular {
+		font-weight: 400;
+	}
+
+	&.medium {
+		font-weight: 500;
+	}
+
+	&.semibold {
+		font-weight: 600;
+	}
+
+	&.bold {
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,65 @@
+.selectBox {
+	position: relative;
+
+	.defaultValue {
+		height: 42px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid #6eacda;
+		border-radius: 4px;
+		padding: 8px;
+		background: #ffffff;
+		color: #6eacda;
+		cursor: pointer;
+		user-select: none;
+
+		svg {
+			transition: all 0.3s;
+
+			&.active {
+				transform: rotateZ(180deg);
+			}
+		}
+	}
+
+	.options {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		transform: translateY(8px);
+		opacity: 0;
+		user-select: none;
+		pointer-events: none;
+		transition: all 0.3s;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		border: 1px solid #6eacda;
+		border-radius: 4px;
+		overflow: hidden;
+		z-index: 999;
+
+		&.active {
+			transform: translateY(4px);
+			opacity: 1;
+			user-select: all;
+			pointer-events: all;
+		}
+
+		.option {
+			padding: 8px;
+			background: #ffffff;
+			color: #6eacda;
+			cursor: pointer;
+			user-select: none;
+			transition: all 0.3s;
+
+			&.selected {
+				background: #6eacda;
+				color: #ffffff;
+			}
+		}
+	}
+}
