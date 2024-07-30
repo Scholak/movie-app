@@ -1,5 +1,6 @@
 // Library Imports
 import { useForm } from 'react-hook-form'
+import { useSelector } from 'react-redux'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
 // Component Imports
@@ -8,6 +9,7 @@ import Button from '@/components/atoms/Button'
 import SelectBox from '@/components/atoms/SelectBox'
 
 // Type Imports
+import { RootState } from '@/store'
 import { IFilterForm } from '@/types/formTypes'
 import { IFilterTypes } from '@/types/filterTypes'
 
@@ -17,6 +19,8 @@ import styles from './Filters.module.scss'
 const Filters = () => {
 	const navigate = useNavigate()
 	const [searchParams] = useSearchParams()
+
+	const { isLoading } = useSelector((state: RootState) => state.movies)
 
 	const { register, setValue, handleSubmit } = useForm<IFilterForm>({
 		defaultValues: {
@@ -63,7 +67,12 @@ const Filters = () => {
 					onChange={value => setValue('type', value as IFilterTypes)}
 				/>
 			</div>
-			<Button onClick={() => {}}>Search</Button>
+			<Button
+				onClick={() => {}}
+				disabled={isLoading}
+			>
+				Search
+			</Button>
 		</form>
 	)
 }
