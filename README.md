@@ -9,7 +9,6 @@ This project has been created for Invent Analytics Frontend Developer Case. It c
 - Axios
 - Framer Motion
 - React
-- React
 - React Hook Form
 - React Router Dom
 - React Toastify
